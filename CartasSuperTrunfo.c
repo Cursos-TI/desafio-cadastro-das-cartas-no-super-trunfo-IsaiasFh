@@ -4,12 +4,15 @@ int main(){
 
     /*====  CARTA 1  ====*/
     char estado[20];
-    char Codcarta[20];/*Código da carta*/
-    char cidade[20];/*Nome da cidade*/
-    int populacao;/*Quantidade da População*/
-    float km²;/*Área em quilômetros quadrados*/
-    float pib;/*População Interno Bruto*/
-    int npt;/*Número de pontos turisticos*/
+    char Codcarta[20]; /*Código da carta*/
+    char cidade[20]; /*Nome da cidade*/
+    int populacao; /*Quantidade da População*/
+    float km²; /*Área em quilômetros quadrados*/
+    float pib; /*População Interno Bruto*/
+    int npt; /*Número de pontos turisticos*/
+    float Dp; /*Densidade Populacional*/
+    float PIBpc; /*PIB per capita*/
+   
 
     printf("-----   CARTA NÚMERO 1    ----- \n");
    
@@ -36,24 +39,31 @@ int main(){
 
     printf("CARTA NÚMERO 1: \n");
     
+    Dp = (float) populacao / km²;
+    PIBpc  = (float) pib / populacao;
+    
     printf("Nome do estado: %s\n",estado); 
     printf("Código da carta: %s\n",Codcarta);
     printf("Nome da Cidade: %s\n",cidade);
     printf("População: %d\n",populacao);
-    printf("Àrea: %f\n",km²);
-    printf("PIB: %f\n",pib);
+    printf("Àrea: %f\n",km², "km²");
+    printf("PIB: %f\n", pib, "bilhões de reais");
     printf("Número de Pontos Turísticos: %d\n",npt);
+    printf("O valor da Densidade Populacional é: %.2f hab/km²\n" , Dp);
+    printf("Valor do PIB per capita: %.2f reais\n ", PIBpc);
 
 
 
     /*===== CARTA 2 =====*/
     char estado2[20];
-    char Codcarta2[20];/*Código da carta*/
-    char cidade2[20];/*Nome da cidade*/
-    int populacao2;/*Quantidade da População*/
-    float km²2;/*Área em quilômetros quadrados*/
-    float pib2;/*População Interno Bruto*/
-    int npt2;/*Número de pontos turisticos*/
+    char Codcarta2[20]; /*Código da carta*/
+    char cidade2[20]; /*Nome da cidade*/
+    int populacao2; /*Quantidade da População*/
+    float km²2; /*Área em quilômetros quadrados*/
+    float pib2; /*População Interno Bruto*/
+    int npt2; /*Número de pontos turisticos*/
+    float Dp2; /*Densidade Populacional*/
+    float PIBpc2; /*PIB per capita*/
 
     printf("-----   CARTA NÚMERO 2   -------- \n");
 
@@ -80,13 +90,18 @@ int main(){
 
     printf("CARTA NÚMERO 2: \n");
 
-    printf("Nome do estado: %s\n",estado2); 
-    printf("Código da carta: %s\n",Codcarta2);
-    printf("Nome da Cidade: %s\n",cidade2);
-    printf("População: %d\n",populacao2);
-    printf("Àrea: %f\n",km²2);
-    printf("PIB: %f\n",pib2);
-    printf("Número de Pontos Turísticos: %d\n",npt2);
+    Dp2 = (float) populacao2 / km²2;
+    PIBpc2  = (float) pib2 / populacao2;
+
+    printf("Nome do estado: %s\n", estado2); 
+    printf("Código da carta: %s\n", Codcarta2);
+    printf("Nome da Cidade: %s\n", cidade2);
+    printf("População: %d\n", populacao2);
+    printf("Àrea: %2.f\n", km²2, "km²");
+    printf("PIB: %f\n", pib2, "bilhões de reais");
+    printf("Número de Pontos Turísticos: %d\n", npt2);
+    printf("O valor da Densidade Populacional é: %.2f hab/km²\n" , Dp2);
+    printf("Valor do PIB per capita: %f reais\n ", PIBpc2);
 
     return 0;
 
